@@ -149,49 +149,62 @@ static int MyScoreL2 = 0;
 static ofstream out_file; 
 static ifstream in_file; 
 
+// load and process gif animations for display
 void load_images() {
+	
+// background for level 1
   for(int i=0; i < N1; ++i)
 {
  std::ostringstream oss; oss << i;
  std::string s = "levels/level1"+oss.str()+".gif";
  level1_images[i] = new Fl_GIF_Image(s.c_str());
 }
-  for(int i=0; i < N2; ++i)
+
+// main character running left animation
+for(int i=0; i < N2; ++i)
 {
  std::ostringstream oss; oss << i;
  std::string s = "char/char_left_"+oss.str()+".gif";
  char_images_left[i] = new Fl_GIF_Image(s.c_str());
 }
-  for(int i=0; i < N2; ++i)
+
+// main character running right animation
+for(int i=0; i < N2; ++i)
 {
  std::ostringstream oss; oss << i;
  std::string s = "char/char_right_"+oss.str()+".gif";
  char_images_right[i] = new Fl_GIF_Image(s.c_str());
 }
-  for(int i=0; i < N3; ++i)
+
+// ?? leftover from previous developlment ??
+for(int i=0; i < N3; ++i)
 {
  std::ostringstream oss; 
  oss << setfill('0') << setw(2) << i;
  std::string s = "leaf/leaf"+oss.str()+".gif";
  leaf_images[i] = new Fl_GIF_Image(s.c_str());
 }
-  for(int i = 0; i < SHURIKEN; i++) //loads the images
-  {
-   ostringstream oss;
-   oss << setfill('0') << setw(3) << i;
-   string s = "Shuriken/frame_";
-   s += oss.str();
-   s += ".png";
-   shuriken_images[i] = new Fl_PNG_Image(s.c_str());
-  }
-  //level up
+
+// shuriken rotating animation
+for(int i = 0; i < SHURIKEN; i++) //loads the images
+{
+ ostringstream oss;
+ oss << setfill('0') << setw(3) << i;
+ string s = "Shuriken/frame_";
+ s += oss.str();
+ s += ".png";
+ shuriken_images[i] = new Fl_PNG_Image(s.c_str());
+}
+
+// level up image
 for(int i=0; i < N1; ++i)
 {
  std::ostringstream oss; oss << i;
  std::string s = "objects/level_up_"+oss.str()+".png";
  level_up_images[i] = new Fl_PNG_Image(s.c_str());
 }
-  //level2
+  
+// background for level 2
 for(int i=0; i < N1; ++i)
 {
  std::ostringstream oss; oss << i;
@@ -200,6 +213,8 @@ for(int i=0; i < N1; ++i)
 }
 }
 
+// takes the scores from the first and second 
+// levels and sums them.
 int score_sum(int score1, int score2) {
   //add up the scores
 int sum = 0;
