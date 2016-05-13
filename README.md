@@ -10,11 +10,7 @@ Screenshots
 -----------
 
 ![Screenshot 1](https://github.com/knsy/cs-class-game-assignment/blob/master/screenshots/labx2.png "Screenshot 1")
-
-
 ![Screenshot 2](https://github.com/knsy/cs-class-game-assignment/blob/master/screenshots/labx3.png "Screenshot 2")
-
-
 ![Screenshot 3](https://github.com/knsy/cs-class-game-assignment/blob/master/screenshots/labx6.png "Screenshot 3")
 
 
@@ -22,8 +18,7 @@ Screenshots
 
 Video
 -----
-Here is a runthrough. 50sec long:
-
+Here is a runthrough. 50sec long. Click to jump to Youtube:
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/2h_93ZBxj0M/0.jpg)](http://www.youtube.com/watch?v=2h_93ZBxj0M "Simple C++ Game")
 
